@@ -8,61 +8,55 @@ body {
   background-color: transparent;
 }
 
-#root {
-  height: 100%;
+a:hover {
+    text-decoration: none;
 }
 
-.Home {
-  min-height:100%;
-	background-size: cover;
-  background-image: url('/images/pattern.svg');
+#root {
+  height: 100%;
 }
 
 .Header {
   background-color: rgba(252, 90, 44, 0.89);
   height: 64px;
   padding: 14px 14px 14px 5px;
-  color: white;
 }
-
-
-
-.Home {
-    padding: 5% 0;
-}
-
-.Home-content {
-    padding: 14% 0;
-}
-
-
 
 .Header h2 {
   margin: 0;
+}
+
+.Header a {
+ color: white;
 }
 
 .Header input[type="text"] {
   margin-right: 10px;
   display: inline-block;
   width: auto;
+  vertical-align: middle;
 }
 
-.Home-content {
+.Home {
+  min-height:100%;
+  background-size: cover;
+  background-image: url('/images/pattern.svg');
+  padding: 25% 0;
   color: white;
 }
 
-.Home-content h1 {
-    font-weight: 100;
-    font-size: 45px;
+.Home h1 {
+  font-weight: 100;
+  font-size: 45px;
 }
 
-.Home-content form {
-    width: 172;
-    display: inline-block;;
+.Home form {
+  width: 172px;
+  display: inline-block;;
 }
 
-.Home-content input[type="text"] {
-    margin-bottom: 10px;
+.Home input[type="text"] {
+  margin-bottom: 10px;
 }
 
 #forecast-container h1 {
@@ -85,7 +79,7 @@ body {
 }
 
 #forecast-daily-container {
-    margin-top: 80px;
+ margin-top: 80px;
 }
 
 .forecast-daily {

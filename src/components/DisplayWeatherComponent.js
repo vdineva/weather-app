@@ -21,10 +21,11 @@ class DisplayWeatherComponent extends React.Component {
     });
   }
 
-  handleClick(...args) {
+  handleClick(e, index) {
+    e.preventDefault();
     browserHistory.push({
       pathname: `/detail/${this.props.routeParams.city}`,
-      state: this.state.forecast[args[0]],
+      state: this.state.forecast[index],
     });
   }
 
@@ -36,14 +37,15 @@ class DisplayWeatherComponent extends React.Component {
 
     const forecast = this.state.forecast.map((dailyForecast, index) =>
       (
-        <div
-          className="col-xs-3 forecast-daily"
+        <a
+          href=""
+          className="col-xs-6 col-sm-4 col-md-3 forecast-daily"
           key={dailyForecast.dt}
-          onClick={this.handleClick.bind(this, index)}
+          onClick={e => this.handleClick(e, index)}
         >
           <p><img src={`/images/weather-icons/${dailyForecast.weather[0].icon}.svg`} alt="" /></p>
           <p>{ moment(new Date(dailyForecast.dt * 1000)).format('dddd, MMM D') }</p>
-        </div>
+        </a>
       ));
 
     return (
