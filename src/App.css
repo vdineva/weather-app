@@ -9,7 +9,7 @@ body {
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #root {
@@ -27,7 +27,7 @@ a:hover {
 }
 
 .Header a {
- color: white;
+  color: white;
 }
 
 .Header input[type="text"] {
@@ -41,7 +41,7 @@ a:hover {
   min-height:100%;
   background-size: cover;
   background-image: url('/images/pattern.svg');
-  padding: 25% 0;
+  padding: 18% 0;
   color: white;
 }
 
@@ -59,23 +59,24 @@ a:hover {
   margin-bottom: 10px;
 }
 
-#forecast-container h1 {
+#forecast {
+  margin-top: 50px;
+}
+
+#forecast h1 {
   font-weight: 100;
   font-size: 65px;
   margin-bottom: 30px;
 }
 
-#forecast-container p {
+#forecast p {
   font-size: 30px;
   font-weight: 100;
 }
 
-#forecast-container img {
-  height: 18vh;
-}
-
-#forecast {
-  margin-top: 50px;
+#forecast img,
+#forecast-detail img {
+  height: 19vh;
 }
 
 #forecast-daily-container {
@@ -98,8 +99,5 @@ a:hover {
 
 #forecast-detail p {
   font-size: 34px;
-}
-
-#forecast-detail img {
-  height: 19vh;
+  font-weight: 100;
 }
