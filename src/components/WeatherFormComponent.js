@@ -13,8 +13,10 @@ class WeatherFormComponent extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    const path = `/forecast/${this.state.city}`;
-    browserHistory.push(path);
+    if (this.state.city.length) {
+      const path = `/forecast/${this.state.city}`;
+      browserHistory.push(path);
+    }
   }
 
   onChange(e) {
