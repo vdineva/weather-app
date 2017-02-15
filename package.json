@@ -28,5 +28,5 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js || exit 0"
   },
-  "homepage": "./weather-app"
+  "homepage": "."
 }
