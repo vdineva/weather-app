@@ -10,7 +10,7 @@ class WeatherComponent extends React.Component {
 
     this.state = {
       forecast: undefined,
-      error: false
+      error: false,
     };
   }
 
@@ -23,7 +23,7 @@ class WeatherComponent extends React.Component {
       } else {
         this.setState({
           forecast: [],
-          error: data
+          error: data,
         });
       }
     });
