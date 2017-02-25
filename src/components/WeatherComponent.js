@@ -10,14 +10,22 @@ class WeatherComponent extends React.Component {
 
     this.state = {
       forecast: undefined,
+      error: false
     };
   }
 
   componentDidMount() {
     api.getData(this.props.params.city).then((data) => {
-      this.setState({
-        forecast: data.list,
-      });
+      if (data && data.list) {
+        this.setState({
+          forecast: data.list,
+        });
+      } else {
+        this.setState({
+          forecast: [],
+          error: data
+        });
+      }
     });
   }
 
@@ -33,6 +41,8 @@ class WeatherComponent extends React.Component {
   render() {
     if (!this.state.forecast) {
       return <div className="loader">Loading...</div>;
+    } else if (this.state.error) {
+      return <h3 className="text-center">{this.state.error}</h3>;
     }
 
     const forecast = this.state.forecast.map((dailyForecast, index) =>

@@ -6,6 +6,7 @@ var helpers = {
       return response.data;
     }).catch(e => {
       console.warn('Error retrieving data', e);
+      return 'Unable to fetch weather data';
     });
   }
 };

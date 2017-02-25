@@ -4,7 +4,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import App from './components/App';
 import WeatherComponent from './components/WeatherComponent';
 import DailyWeatherComponent from './components/DailyWeatherComponent';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Routes = (
   <Router history={browserHistory}>

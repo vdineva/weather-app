@@ -8,7 +8,8 @@ body {
   background-color: transparent;
 }
 
-a:hover {
+a:hover,
+a:active {
   text-decoration: none;
 }
 
@@ -24,6 +25,12 @@ a:hover {
 
 .Header h2 {
   margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .Header h2 {
+    font-size: 26px;
+  }
 }
 
 .Header a {
