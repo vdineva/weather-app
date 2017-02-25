@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import { Router, Route, browserHistory } from 'react-router';
 import App from './components/App';
 import WeatherComponent from './components/WeatherComponent';
 import DailyWeatherComponent from './components/DailyWeatherComponent';
-import 'bootstrap/dist/css/bootstrap.css';
 
 const Routes = (
   <Router history={browserHistory}>
